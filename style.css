@@ -428,3 +428,84 @@ ul{
     margin-top: 70%;
 }
 /* -------------wrapper------------------- */
+/* -------------shpping------------------- */
+.shipping{
+    padding: 50px;
+    background: #37B234;
+    color: white;
+}
+
+.shipping .img{
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 20px;
+    padding: 30px;
+}
+
+.shipping i{
+    font-size: 20px;
+}
+.shipping h3{
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.shipping p {
+    opacity: 0.8;
+    line-height: 20px;
+}
+/* -------------shpping------------------- */
+
+/* -------------Footer------------------- */
+footer {
+    background: black;
+  }
+  
+  footer .scontainer {
+    padding: 70px 50px;
+    color: white;
+  }
+  
+  footer h3 {
+    margin: 30px 0 20px 0;
+  }
+  
+  footer h1 {
+    color: white;
+    margin: 15px 0 10px 0;
+  }
+  
+  footer li,
+  footer p {
+    margin: 15px 0 10px 0;
+    color: grey;
+  }
+  
+  footer input {
+    padding: 10px;
+    background: none;
+    border: none;
+  }
+  
+  footer .input {
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  footer .input i {
+    margin: 15px;
+  }
+  
+  footer .social_media i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    color: grey;
+  }
+  
