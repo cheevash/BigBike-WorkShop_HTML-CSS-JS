@@ -425,7 +425,7 @@ ul{
 }
 
 .Assesories{
-    margin-top: 70%;
+    margin-top: 60%;
 }
 /* -------------wrapper------------------- */
 /* -------------shpping------------------- */
@@ -509,3 +509,98 @@ footer {
     color: grey;
   }
   
+  @media only screen and (max-width:768px) {
+
+  /*----------home--------*/
+  .home .content {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .home .left {
+    padding: 50px 100px 50px 50px;
+  }
+
+  .home::after {
+    background-size: cover;
+    height: 70vh;
+  }
+
+  .ani_image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /*----------home--------*/
+  /*----------latest--------*/
+  .heading button {
+    left: 30%;
+  }
+
+  .heading .line {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .latest .scontainer {
+    padding: 0;
+  }
+
+  .latest .box {
+    padding: 10px;
+  }
+
+  /*----------latest--------*/
+  /*----------slider--------*/
+  .slider .item {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  /*----------slider--------*/
+  .shipping .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Assesories{
+    margin-top: 170%;
+    margin-bottom: 10%;
+}
+}
+
+@media only screen and (max-width:511px) {
+  .home::after {
+    height: 100vh;
+  }
+
+  .time_box {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .heading h1 {
+    font-size: 35px;
+  }
+
+  .heading button {
+    left: 20%;
+  }
+
+  footer .scontainer,
+  .latest .scontainer {
+    padding: 0;
+  }
+
+  .shipping {
+    padding: 50px 0 50px 0;
+  }
+}
