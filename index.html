@@ -3,616 +3,983 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>APEX MOTORS | Premier Superbike & Racing Gear Store</title>
+    <meta name="description" content="Experience raw power and precision. Discover elite superbikes, MotoGP-spec helmets, racing suits, and performance tuning parts at APEX MOTORS." />
+    <link rel="icon" type="image/png" href="image/logo.png" />
+
+    <!-- Google Fonts: Kanit (Modern Luxury & Full Thai/Eng) + Outfit (Dynamic Automotive) + Barlow Condensed (Racing Specs) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome 6 Icons -->
     <link
       rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <!--  animejs -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
-    <!--  animejs -->
-    <!--  owl css -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-    <!--  owl css -->
 
-    <!--  jquery -->
-    <script
-      src="https://code.jquery.com/jquery-1.12.4.min.js"
-      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-      crossorigin="anonymous"
-    ></script>
-    <!--  jquery -->
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom Modern Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <nav class="nav">
-      <div class="container flex1">
-        <div class="logo">
-          <img src="image/logo.png" alt="" />
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <div class="top-bar-promo">
+          <i class="fas fa-bolt"></i>
+          <span>Season 2026 Launch: Worldwide Free Shipping over $200 | Use Code <strong>APEX10</strong> for 10% OFF</span>
         </div>
-        <div class="menu">
-          <div class="main_list" id="mainListDiv">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">My Work</a></li>
-              <li><a href="#">Design</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="media_button">
-          <i class="fas fa-bars" id="mediaButton"></i>
-        </div>
-
-        <div class="account flex1">
-          <i class="far fa-unlock-alt"></i>
-          <p>Login / Register</p>
+        <div class="top-bar-actions">
+          <span><i class="fas fa-headset"></i> +1 (800) 888-APEX</span>
+          <select id="currencySelect" class="currency-select" aria-label="Select Currency">
+            <option value="USD">USD ($)</option>
+            <option value="THB">THB (฿)</option>
+            <option value="EUR">EUR (€)</option>
+          </select>
         </div>
       </div>
-    </nav>
+    </div>
 
-    <section class="home">
-      <div class="content flex">
-        <div class="left">
-          <div class="time_box flex">
-            <div class="time">
-              <h1>60 :</h1>
-              <span>DAYS</span>
+    <!-- Sticky Main Navigation -->
+    <header class="navbar">
+      <div class="container navbar-container">
+        <a href="#" class="brand-logo">
+          <img src="image/logo.png" alt="APEX Motors Logo" />
+          <div class="brand-logo-text">
+            APEX MOTORS
+            <span>SUPERBIKE WORKSHOP</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#showroom" class="nav-link">Showroom</a>
+          <a href="#comparison" class="nav-link">Compare</a>
+          <a href="#catalog" class="nav-link">Rider Gear</a>
+          <a href="#dealerships" class="nav-link">Dealerships</a>
+          <a href="#financing" class="nav-link">Financing</a>
+          <a href="#reviews" class="nav-link">Reviews</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="nav-icon-btn" onclick="toggleWishlistModal()" title="View Wishlist">
+            <i class="far fa-heart"></i>
+            <span class="nav-badge wishlist-count-badge">0</span>
+          </button>
+          <button class="nav-icon-btn" onclick="openCartDrawer()" title="Shopping Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="nav-badge cart-count-badge">0</span>
+          </button>
+          <button class="btn btn-primary btn-sm" onclick="openTestRideModal()">
+            <i class="fas fa-flag-checkered"></i> <span class="hide-text-mobile">Book Ride</span>
+          </button>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Open Mobile Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <!-- Countdown Timer -->
+            <div class="countdown-box">
+              <div class="countdown-label">
+                <i class="fas fa-stopwatch"></i> Premiere In
+              </div>
+              <div class="countdown-digits">
+                <div class="time-unit">
+                  <div class="time-num" id="timerDays">60</div>
+                  <div class="time-txt">Days</div>
+                </div>
+                <div class="time-sep">:</div>
+                <div class="time-unit">
+                  <div class="time-num" id="timerHours">14</div>
+                  <div class="time-txt">Hours</div>
+                </div>
+                <div class="time-sep">:</div>
+                <div class="time-unit">
+                  <div class="time-num" id="timerMins">45</div>
+                  <div class="time-txt">Mins</div>
+                </div>
+                <div class="time-sep">:</div>
+                <div class="time-unit">
+                  <div class="time-num" id="timerSecs">28</div>
+                  <div class="time-txt">Secs</div>
+                </div>
+              </div>
             </div>
-            <div class="time">
-              <h1>24 :</h1>
-              <span>HOURS</span>
+
+            <div class="hero-badge-wrap">
+              <span class="badge badge-green"><i class="fas fa-award"></i> World Premiere 2026 Series</span>
             </div>
-            <div class="time">
-              <h1>58 :</h1>
-              <span>MINUTES</span>
+
+            <h1 class="hero-title">
+              FEEL THE RAW <br />
+              <span class="text-gradient">ADRENALINE</span>
+            </h1>
+
+            <p class="hero-desc">
+              Experience the pinnacle of hypersport engineering. Unleash monstrous V-Twin torque, track-dominating aero winglets, and race-bred Brembo precision.
+            </p>
+
+            <!-- Spec Badges -->
+            <div class="hero-specs-row">
+              <div class="spec-chip">
+                <i class="fas fa-tachometer-alt"></i>
+                <div>
+                  <span class="spec-chip-val">2.6s</span>
+                  <span class="spec-chip-lbl">0-100 KM/H</span>
+                </div>
+              </div>
+              <div class="spec-chip">
+                <i class="fas fa-bolt"></i>
+                <div>
+                  <span class="spec-chip-val">225 HP</span>
+                  <span class="spec-chip-lbl">Peak Output</span>
+                </div>
+              </div>
+              <div class="spec-chip">
+                <i class="fas fa-wind"></i>
+                <div>
+                  <span class="spec-chip-val">330 KM/H</span>
+                  <span class="spec-chip-lbl">Top Speed</span>
+                </div>
+              </div>
+              <div class="spec-chip">
+                <i class="fas fa-weight-hanging"></i>
+                <div>
+                  <span class="spec-chip-val">180 KG</span>
+                  <span class="spec-chip-lbl">Dry Weight</span>
+                </div>
+              </div>
             </div>
-            <div class="time">
-              <h1>42</h1>
-              <span>SECONDS</span>
+
+            <!-- CTA Buttons -->
+            <div class="hero-cta">
+              <a href="#showroom" class="btn btn-primary">
+                <i class="fas fa-motorcycle"></i> Explore Showroom
+              </a>
+              <button class="btn btn-secondary" onclick="openTestRideModal('bike-ktm-1290')">
+                <i class="fas fa-calendar-alt"></i> Book Test Ride
+              </button>
             </div>
           </div>
 
-          <h2>Lunching New Bike</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-            nesciunt laboriosam cupiditate quod! consectetur doloribus fugit!
+          <!-- Hero Image with Floating Badges & Livery Swatches -->
+          <div class="hero-image-wrapper">
+            <img src="image/bike.png" alt="KTM 1290 Super Duke Hyperbike" class="hero-main-img" id="heroMainBike" />
+            
+            <div class="floating-badge badge-pos-1">
+              <i class="fas fa-shield-halved" style="color: var(--accent-green); font-size: 1.4rem;"></i>
+              <div>
+                <strong style="color: #fff; font-size: 0.9rem; display: block;">WP Apex Pro 7548</strong>
+                <span style="color: var(--text-muted); font-size: 0.75rem;">Semi-Active Suspension</span>
+              </div>
+            </div>
+            <div class="floating-badge badge-pos-2">
+              <i class="fas fa-fire-flame-curved" style="color: var(--accent-orange); font-size: 1.4rem;"></i>
+              <div>
+                <strong style="color: #fff; font-size: 0.9rem; display: block;">Akrapovič Titanium</strong>
+                <span style="color: var(--text-muted); font-size: 0.75rem;">Race-Spec Exhaust</span>
+              </div>
+            </div>
+
+            <!-- Livery / Color Customizer Swatches -->
+            <div class="color-customizer-bar">
+              <span><i class="fas fa-palette"></i> Livery:</span>
+              <button class="color-swatch swatch-orange active" data-color="orange" onclick="setHeroLivery('orange')" title="Ready-to-Race Orange"></button>
+              <button class="color-swatch swatch-lime" data-color="lime" onclick="setHeroLivery('lime')" title="Toxic Acid Lime"></button>
+              <button class="color-swatch swatch-red" data-color="red" onclick="setHeroLivery('red')" title="Ducati Corse Red"></button>
+              <button class="color-swatch swatch-stealth" data-color="stealth" onclick="setHeroLivery('stealth')" title="Stealth Carbon Black"></button>
+              <button class="color-swatch swatch-blue" data-color="blue" onclick="setHeroLivery('blue')" title="Yamaha Racing Blue"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features & Trust Strip -->
+      <section class="features-strip">
+        <div class="container features-grid">
+          <div class="feature-box">
+            <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
+            <div class="feature-info">
+              <h4>Global Air Express</h4>
+              <p>Insured expedited shipping to 90+ countries worldwide.</p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+            <div class="feature-info">
+              <h4>3-Year Factory Warranty</h4>
+              <p>Comprehensive powertrain & electronic protection.</p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon"><i class="fas fa-wrench"></i></div>
+            <div class="feature-info">
+              <h4>Certified Dyno Tuning</h4>
+              <p>Custom ECU mapping by factory-trained race technicians.</p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon"><i class="fas fa-award"></i></div>
+            <div class="feature-info">
+              <h4>100% Genuine Gear</h4>
+              <p>Direct authorized dealer for AGV, Shoei, Dainese, Brembo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Superbike Showroom (Swiper) + Engine Sound Simulator -->
+      <section class="section showroom-section" id="showroom">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-trophy"></i> Elite Machines</span>
+            <h2 class="section-title">2026 Superbike Showroom</h2>
+            <p class="section-desc">
+              Discover our championship-winning line-up of race-ready superbikes and hypernakeds with active aero and electronic rider suites.
+            </p>
+          </div>
+
+          <!-- Swiper Container -->
+          <div class="swiper" id="showroomSwiper">
+            <div class="swiper-wrapper" id="showroomSwiperWrapper">
+              <!-- Dynamically rendered via app.js -->
+            </div>
+            <!-- Navigation -->
+            <div class="swiper-button-next showroom-next"></div>
+            <div class="swiper-button-prev showroom-prev"></div>
+            <div class="swiper-pagination showroom-pagination" style="bottom: -35px;"></div>
+          </div>
+
+          <!-- 🔊 Interactive Engine Sound & Rev Counter Simulator Card -->
+          <div class="engine-simulator-card">
+            <div class="engine-sim-grid">
+              <div class="engine-info-box">
+                <span class="badge badge-orange"><i class="fas fa-volume-high"></i> Acoustic Telemetry</span>
+                <h4 style="margin-top: 8px;">Superbike Rev & Exhaust Simulator</h4>
+                <p>Experience the raw exhaust note and rev harmonics generated via real-time Web Audio synthesis.</p>
+                <label style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px;">Engine Sound Profile:</label>
+                <select id="engineSoundProfileSelect" class="engine-selector">
+                  <option value="vtwin">1,301cc LC8 75° V-Twin (Low-End Rumble)</option>
+                  <option value="v4">1,103cc Desmosedici V4 (MotoGP Scream)</option>
+                  <option value="i4">1,000cc Crossplane Inline-4 (High-Rev Howl)</option>
+                </select>
+              </div>
+
+              <div class="tacho-gauge-wrap">
+                <div class="shift-lights-row">
+                  <div class="shift-led green" data-rpm-threshold="6000"></div>
+                  <div class="shift-led green" data-rpm-threshold="8000"></div>
+                  <div class="shift-led orange" data-rpm-threshold="10000"></div>
+                  <div class="shift-led orange" data-rpm-threshold="11500"></div>
+                  <div class="shift-led red" data-rpm-threshold="12800"></div>
+                </div>
+                <div class="gauge-dial-container">
+                  <div class="gauge-dial-arc"></div>
+                  <div class="gauge-needle" id="tachoNeedle"></div>
+                  <div class="gauge-center-pin"></div>
+                </div>
+                <div class="rpm-digital-readout">
+                  <div class="rpm-number" id="rpmDigitalDisplay">1,200</div>
+                  <div class="rpm-label">RPM GAUGE (14K REDLINE)</div>
+                </div>
+              </div>
+
+              <div class="throttle-action-box">
+                <button class="throttle-btn" id="throttleBtn" title="Press & Hold to Rev Engine">
+                  <i class="fas fa-gas-pump"></i>
+                  <span>HOLD TO REV</span>
+                </button>
+                <span style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">
+                  <i class="fas fa-hand-pointer"></i> Press & Hold Throttle
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⚖️ Head-to-Head Comparison Battle Section -->
+      <section class="section comparison-section" id="comparison">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-scale-balanced"></i> Spec Showdown</span>
+            <h2 class="section-title">Head-to-Head Superbike Battle</h2>
+            <p class="section-desc">
+              Compare horsepower, torque, top speed, and power-to-weight ratio side-by-side to choose your ultimate weapon.
+            </p>
+          </div>
+
+          <div class="comparison-wrapper">
+            <div class="comparison-selectors">
+              <div class="comparison-select-box">
+                <label style="font-size: 0.8rem; color: var(--accent-green); font-weight: 700; text-transform: uppercase; margin-bottom: 6px; display: block;">Select Machine A</label>
+                <select id="compareBikeA" aria-label="Select Bike A"></select>
+              </div>
+              <div class="vs-badge-icon">VS</div>
+              <div class="comparison-select-box">
+                <label style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; margin-bottom: 6px; display: block;">Select Machine B</label>
+                <select id="compareBikeB" aria-label="Select Bike B"></select>
+              </div>
+            </div>
+
+            <div class="comparison-battle-cards">
+              <div class="battle-bike-card" id="battleCardA"></div>
+              <div class="battle-bike-card" id="battleCardB"></div>
+            </div>
+
+            <!-- Battle Meters List -->
+            <div class="battle-specs-list">
+              <!-- Metric 1: Power -->
+              <div class="battle-spec-row">
+                <div class="battle-spec-header">
+                  <span class="battle-val-a" id="valPowerA">180 HP</span>
+                  <span class="battle-metric-name"><i class="fas fa-bolt"></i> Peak Horsepower</span>
+                  <span class="battle-val-b" id="valPowerB">215.5 HP</span>
+                </div>
+                <div class="battle-meters-container">
+                  <div class="meter-bar-a-wrap"><div class="meter-bar-a" id="meterPowerA" style="width: 72%;"></div></div>
+                  <div class="meter-bar-b-wrap"><div class="meter-bar-b" id="meterPowerB" style="width: 86%;"></div></div>
+                </div>
+              </div>
+
+              <!-- Metric 2: Torque -->
+              <div class="battle-spec-row">
+                <div class="battle-spec-header">
+                  <span class="battle-val-a" id="valTorqueA">140 Nm</span>
+                  <span class="battle-metric-name"><i class="fas fa-fire"></i> Peak Torque</span>
+                  <span class="battle-val-b" id="valTorqueB">123.6 Nm</span>
+                </div>
+                <div class="battle-meters-container">
+                  <div class="meter-bar-a-wrap"><div class="meter-bar-a" id="meterTorqueA" style="width: 87%;"></div></div>
+                  <div class="meter-bar-b-wrap"><div class="meter-bar-b" id="meterTorqueB" style="width: 77%;"></div></div>
+                </div>
+              </div>
+
+              <!-- Metric 3: Power to Weight -->
+              <div class="battle-spec-row">
+                <div class="battle-spec-header">
+                  <span class="battle-val-a" id="valPtwA">1.00 HP/kg</span>
+                  <span class="battle-metric-name"><i class="fas fa-weight-hanging"></i> Power-to-Weight</span>
+                  <span class="battle-val-b" id="valPtwB">1.24 HP/kg</span>
+                </div>
+                <div class="battle-meters-container">
+                  <div class="meter-bar-a-wrap"><div class="meter-bar-a" id="meterPtwA" style="width: 66%;"></div></div>
+                  <div class="meter-bar-b-wrap"><div class="meter-bar-b" id="meterPtwB" style="width: 82%;"></div></div>
+                </div>
+              </div>
+
+              <!-- Metric 4: Top Speed -->
+              <div class="battle-spec-row">
+                <div class="battle-spec-header">
+                  <span class="battle-val-a" id="valSpeedA">290 km/h</span>
+                  <span class="battle-metric-name"><i class="fas fa-wind"></i> Top Speed</span>
+                  <span class="battle-val-b" id="valSpeedB">325 km/h</span>
+                </div>
+                <div class="battle-meters-container">
+                  <div class="meter-bar-a-wrap"><div class="meter-bar-a" id="meterSpeedA" style="width: 82%;"></div></div>
+                  <div class="meter-bar-b-wrap"><div class="meter-bar-b" id="meterSpeedB" style="width: 93%;"></div></div>
+                </div>
+              </div>
+
+              <!-- Metric 5: 0-100 km/h -->
+              <div class="battle-spec-row">
+                <div class="battle-spec-header">
+                  <span class="battle-val-a" id="valAccelA">2.7s</span>
+                  <span class="battle-metric-name"><i class="fas fa-stopwatch"></i> 0-100 KM/H Time</span>
+                  <span class="battle-val-b" id="valAccelB">2.6s</span>
+                </div>
+                <div class="battle-meters-container">
+                  <div class="meter-bar-a-wrap"><div class="meter-bar-a" id="meterAccelA" style="width: 53%;"></div></div>
+                  <div class="meter-bar-b-wrap"><div class="meter-bar-b" id="meterAccelB" style="width: 60%;"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Flash Deals Carousel -->
+      <section class="section" style="background: var(--bg-primary);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-fire"></i> Limited Drops</span>
+            <h2 class="section-title">Track Essentials & Flash Deals</h2>
+            <p class="section-desc">
+              Grab premium MotoGP replica helmets and race-grade protection with exclusive limited-time seasonal savings.
+            </p>
+          </div>
+
+          <div class="swiper" id="flashDealsSwiper">
+            <div class="swiper-wrapper" id="flashDealsWrapper">
+              <!-- Dynamically rendered via app.js -->
+            </div>
+            <div class="swiper-button-next deals-next"></div>
+            <div class="swiper-button-prev deals-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hyperbike Spotlight Banner -->
+      <section class="spotlight-section">
+        <div class="spotlight-bg-mesh"></div>
+        <div class="container spotlight-grid">
+          <div class="spotlight-text">
+            <span class="badge badge-orange"><i class="fas fa-crown"></i> Continental Dominator</span>
+            <h2>1290 Super Duke GT <br /><span class="text-gradient">The Long-Range Beast</span></h2>
+            <p>
+              Combines interstellar hypersport thrust with continent-crossing touring luxury. Features a 23-liter long-range fuel cell, electronic cruise control, and cornering ABS.
+            </p>
+            <div class="spotlight-features">
+              <div class="spotlight-feat-item">
+                <i class="fas fa-check-circle"></i> 1,301cc 75° V-Twin Engine
+              </div>
+              <div class="spotlight-feat-item">
+                <i class="fas fa-check-circle"></i> 175 HP & 141 Nm Torque
+              </div>
+              <div class="spotlight-feat-item">
+                <i class="fas fa-check-circle"></i> 7" Full Color TFT Dashboard
+              </div>
+              <div class="spotlight-feat-item">
+                <i class="fas fa-check-circle"></i> Heated Grips & Saddle
+              </div>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <button class="btn btn-primary btn-sm" style="font-size: 0.8rem; padding: 10px 15px; width: max-content;" onclick="openTestRideModal('bike-superduke-gt')">
+                <i class="fas fa-key"></i> Schedule Test Ride
+              </button>
+              <button class="btn btn-secondary btn-sm" style="font-size: 0.8rem; padding: 10px 15px; width: max-content;" onclick="loadBikeIntoCalculator(21299)">
+                <i class="fas fa-calculator"></i> Loan Calculator
+              </button>
+            </div>
+          </div>
+          <div class="spotlight-visual">
+            <img src="image/bike3.png" alt="KTM 1290 Super Duke GT" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Gear & Accessories Catalog with Filter & Search -->
+      <section class="section" id="catalog" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-shapes"></i> High-End Motorsport Gear</span>
+            <h2 class="section-title">Racing Gear & Performance Parts</h2>
+            <p class="section-desc">
+              Upgrade your trackday setup with homologated carbon helmets, titanium full systems, and wireless airbag racing suits.
+            </p>
+          </div>
+
+          <!-- Catalog Controls: Filter Tabs, Helmet Sizing Button & Live Search -->
+          <div class="catalog-controls">
+            <div class="filter-tabs">
+              <button class="filter-btn active" data-filter="all">All Products</button>
+              <button class="filter-btn" data-filter="helmets">Helmets</button>
+              <button class="filter-btn" data-filter="boots">Boots</button>
+              <button class="filter-btn" data-filter="gloves">Gloves</button>
+              <button class="filter-btn" data-filter="suits">Racing Suits</button>
+              <button class="filter-btn" data-filter="exhausts">Exhausts</button>
+              <button class="filter-btn" data-filter="performance">Brakes & Forks</button>
+            </div>
+
+            <div class="catalog-actions-right">
+              <button class="btn btn-secondary btn-sm" onclick="openHelmetGuideModal()" title="Calculate Exact Helmet Sizing">
+                <i class="fas fa-ruler-combined"></i> Find Helmet Size
+              </button>
+              <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="catalogSearchInput" placeholder="Search gear, helmets, parts..." />
+              </div>
+            </div>
+          </div>
+
+          <!-- Products Grid Container -->
+          <div class="products-grid" id="productsGrid">
+            <!-- Dynamically populated via app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 📍 Interactive Dealership Showroom & Service Hub Locator -->
+      <section class="section dealership-section" id="dealerships">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-map-location-dot"></i> Global Network</span>
+            <h2 class="section-title">Showroom & Service Hubs</h2>
+            <p class="section-desc">
+              Visit our certified circuit facilities for dyno tuning, factory ECU remapping, suspension service, and VIP track consultations.
+            </p>
+          </div>
+
+          <!-- Dealership Tabs -->
+          <div class="dealership-tabs">
+            <button class="dealer-tab-btn active" data-hub="bkk" onclick="switchDealershipTab('bkk')">
+              <i class="fas fa-building"></i> Bangkok Flagship Hub (TH)
+            </button>
+            <button class="dealer-tab-btn" data-hub="cal" onclick="switchDealershipTab('cal')">
+              <i class="fas fa-building"></i> California Laguna Hub (US)
+            </button>
+            <button class="dealer-tab-btn" data-hub="mil" onclick="switchDealershipTab('mil')">
+              <i class="fas fa-building"></i> Milan Monza Hub (IT)
+            </button>
+            <button class="dealer-tab-btn" data-hub="tok" onclick="switchDealershipTab('tok')">
+              <i class="fas fa-building"></i> Tokyo Fuji Speed Hub (JP)
+            </button>
+          </div>
+
+          <!-- Dynamic Hub Card -->
+          <div class="dealer-hub-card" id="dealerHubCard">
+            <!-- Dynamically populated via app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Financing & Loan EMI Calculator -->
+      <section class="section calculator-section" id="financing">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-coins"></i> Flexible Financing</span>
+            <h2 class="section-title">Superbike Loan Calculator</h2>
+            <p class="section-desc">
+              Tailor your down payment and financing term with our competitive low APR rates. Get approved within 24 hours.
+            </p>
+          </div>
+
+          <div class="calc-wrapper">
+            <div class="calc-controls">
+              <!-- Slider 1: Price -->
+              <div class="calc-group">
+                <div class="calc-header-row">
+                  <span class="calc-label"><i class="fas fa-tag"></i> Superbike MSRP</span>
+                  <span class="calc-value-badge" id="calcPriceVal">$19,599</span>
+                </div>
+                <input type="range" id="calcBikePrice" class="range-slider" min="5000" max="45000" step="500" value="19599" />
+              </div>
+
+              <!-- Slider 2: Down Payment -->
+              <div class="calc-group">
+                <div class="calc-header-row">
+                  <span class="calc-label"><i class="fas fa-wallet"></i> Down Payment (%)</span>
+                  <span class="calc-value-badge" id="calcDownVal">20% ($3,920)</span>
+                </div>
+                <input type="range" id="calcDownPayment" class="range-slider" min="0" max="60" step="5" value="20" />
+              </div>
+
+              <!-- Slider 3: Term -->
+              <div class="calc-group">
+                <div class="calc-header-row">
+                  <span class="calc-label"><i class="fas fa-calendar-alt"></i> Loan Term</span>
+                  <span class="calc-value-badge" id="calcTermVal">36 Months (3.0 Yrs)</span>
+                </div>
+                <input type="range" id="calcLoanTerm" class="range-slider" min="12" max="60" step="6" value="36" />
+              </div>
+
+              <!-- Slider 4: APR Rate -->
+              <div class="calc-group">
+                <div class="calc-header-row">
+                  <span class="calc-label"><i class="fas fa-percentage"></i> Annual Interest Rate (APR)</span>
+                  <span class="calc-value-badge" id="calcRateVal">4.5% APR</span>
+                </div>
+                <input type="range" id="calcInterestRate" class="range-slider" min="1.9" max="9.9" step="0.1" value="4.5" />
+              </div>
+            </div>
+
+            <!-- Calculator Results Card -->
+            <div class="calc-results-card">
+              <div class="calc-main-result">
+                <span>Estimated Monthly Payment</span>
+                <h2 id="calcMonthlyPayment">$466/mo</h2>
+              </div>
+              <div class="calc-breakdown">
+                <div class="breakdown-row">
+                  <span>Financed Amount:</span>
+                  <strong id="calcPrincipalVal">$15,679</strong>
+                </div>
+                <div class="breakdown-row">
+                  <span>Total Interest:</span>
+                  <strong id="calcInterestVal">$1,104</strong>
+                </div>
+                <div class="breakdown-row">
+                  <span>Total Repayment:</span>
+                  <strong id="calcTotalLoanVal">$16,783</strong>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-sm" style="width: max-content; margin: 0 auto; font-size: 0.85rem; padding: 10px 20px;" onclick="showToast('Application Started', 'Our finance specialist will reach out with pre-approval options.', 'fa-file-signature')">
+                <i class="fas fa-paper-plane"></i> Apply for Pre-Approval
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Verified Rider Reviews -->
+      <section class="section" id="reviews" style="background: var(--bg-primary);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-comments"></i> Rider Community</span>
+            <h2 class="section-title">Verified Track Reviews</h2>
+            <p class="section-desc">
+              Read how fellow trackday riders and racers experience our bikes, tuning, and racing equipment.
+            </p>
+          </div>
+
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="rider-header">
+                <img src="image/c1.jpg" alt="Marcus Sterling" class="rider-avatar" />
+                <div class="rider-meta">
+                  <h4>Marcus Sterling</h4>
+                  <span>Ducati Panigale V4 S Owner • Verified Rider</span>
+                </div>
+              </div>
+              <div class="product-rating">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              </div>
+              <p class="testimonial-quote">
+                "The ECU flash and Akrapovič titanium installation transformed my Panigale completely. The mid-range power surge out of apexes is unmatched. Outstanding workshop service!"
+              </p>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="rider-header">
+                <img src="image/c2.jpg" alt="Elena Rostova" class="rider-avatar" />
+                <div class="rider-meta">
+                  <h4>Elena Rostova</h4>
+                  <span>KTM 1290 Super Duke R • Track Coach</span>
+                </div>
+              </div>
+              <div class="product-rating">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              </div>
+              <p class="testimonial-quote">
+                "Ordered the AGV Pista GP RR and Dainese D-Air suit. Shipping was lightning-fast to Singapore and the helmet fitment guidance from their team was flawless."
+              </p>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="rider-header">
+                <img src="image/c3.jpg" alt="David Tanaka" class="rider-avatar" />
+                <div class="rider-meta">
+                  <h4>David Tanaka</h4>
+                  <span>Yamaha YZF-R1M • Club Racer</span>
+                </div>
+              </div>
+              <div class="product-rating">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              </div>
+              <p class="testimonial-quote">
+                "Brembo GP4-RX calipers and Öhlins forks delivered the exact feel I needed for late braking into Turn 1. APEX MOTORS is the gold standard for high-performance motorcycles."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Slide-out Shopping Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay" onclick="if(event.target === this) closeCartDrawer()">
+      <div class="cart-drawer">
+        <div class="cart-header">
+          <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+          <button class="cart-close-btn" onclick="closeCartDrawer()" aria-label="Close Cart">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="cart-items-list" id="cartItemsList">
+          <!-- Dynamically populated via app.js -->
+        </div>
+
+        <div class="cart-footer">
+          <div class="promo-row">
+            <input type="text" id="promoInput" placeholder="Promo code (e.g. APEX10)" />
+            <button class="btn btn-secondary btn-sm" onclick="applyPromoCode()">Apply</button>
+          </div>
+
+          <div class="cart-summary-row">
+            <span>Subtotal:</span>
+            <strong id="cartSubtotal">$0</strong>
+          </div>
+          <div class="cart-summary-row" id="cartDiscountRow" style="display: none; color: var(--accent-green);">
+            <span>Discount:</span>
+            <strong id="cartDiscountVal">-$0</strong>
+          </div>
+          <div class="cart-summary-row">
+            <span>Estimated Shipping:</span>
+            <strong style="color: var(--accent-green);">FREE</strong>
+          </div>
+          <div class="cart-summary-row cart-summary-total">
+            <span>Total:</span>
+            <span id="cartTotal" style="color: var(--accent-green);">$0</span>
+          </div>
+
+          <button class="btn btn-primary checkout-btn" onclick="handleCheckout()">
+            <i class="fas fa-lock"></i> Secure Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal-overlay" id="quickViewModal" onclick="if(event.target === this) closeModal('quickViewModal')">
+      <div class="modal-container">
+        <button class="modal-close-btn" onclick="closeModal('quickViewModal')" aria-label="Close Modal">
+          <i class="fas fa-times"></i>
+        </button>
+        <div id="quickViewContent">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 🪖 Interactive Helmet Sizing Guide Modal -->
+    <div class="modal-overlay" id="helmetGuideModal" onclick="if(event.target === this) closeModal('helmetGuideModal')">
+      <div class="modal-container">
+        <button class="modal-close-btn" onclick="closeModal('helmetGuideModal')" aria-label="Close Modal">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="helmet-guide-wrap">
+          <span class="badge badge-cyan"><i class="fas fa-ruler"></i> Precision Fitment Helper</span>
+          <h3 style="margin-top: 10px;">Find Your Helmet Size</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            Measure your head circumference roughly 1 inch (2.5cm) above your eyebrows around the widest part of your skull.
           </p>
 
-          <div class="button flex">
-            <button class="btn1">Learn More</button>
-            <button class="btn2">Buy Now</button>
-          </div>
-        </div>
-
-        <div class="right">
-          <div class="ani_imge">
-            <img src="/image/bike.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="latest top">
-      <div class="scontainer">
-        <div class="heading">
-          <h1>Latest Poppular Bike</h1>
-          <div class="lines flex1">
-            <div class="line"><i class="fas fa-circle"></i></div>
-            <button>50% OFF</button>
-            <div class="line line2"><i class="fas fa-circle"></i></div>
-          </div>
-        </div>
-
-        <div class="content grid top">
-          <div class="box">
-            <div class="img">
-              <img src="image/l1.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
+          <div style="margin: 24px 0;">
+            <div class="calc-header-row" style="margin-bottom: 8px;">
+              <span class="calc-label"><i class="fas fa-arrows-left-right"></i> Head Circumference</span>
+              <span class="calc-value-badge" id="headCmDisplay">58 cm (22.8")</span>
             </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
+            <input type="range" id="headCircumferenceSlider" class="range-slider" min="53" max="64" step="1" value="58" />
           </div>
 
-          <div class="box">
-            <div class="img">
-              <img src="image/l2.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
+          <div class="helmet-size-result-box">
+            <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Recommended Sizing</span>
+            <span class="recommended-size-badge" id="calcHelmetSizeBadge">M (Medium)</span>
+            <p id="helmetFitTip" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
+              Standard intermediate oval shape fits majority of riders with snug cheek support.
+            </p>
           </div>
 
-          <div class="box">
-            <div class="img">
-              <img src="image/l3.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/l4.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
+          <div style="display: flex; gap: 14px;">
+            <button class="btn btn-primary" onclick="filterHelmetsFromGuide()" style="flex-grow: 1;">
+              <i class="fas fa-hard-hat"></i> View Helmets in My Size
+            </button>
           </div>
 
-          <div class="box">
-            <div class="img">
-              <img src="image/l5.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="img">
-              <img src="image/l6.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="slider top">
-      <div class="scontainer">
-        <div class="owl-carousel owl-theme">
-          <div class="item flex">
-            <div class="left">
-              <p>(Fashion , Twin Disc)</p>
-              <h1>KTM 125 DUKE</h1>
-              <span></span>
-              <ul>
-                <li>- Engine Cc : 370.0cc</li>
-                <li>- Max Power : 14.5 bhp @ 9250 rpm</li>
-                <li>- Tank Capacity : 10.2 L</li>
-                <li>- Wheelbase : 1366 mm</li>
-                <li>- Cooling : Liquid Cooled</li>
-                <li>- Max Torque : 12 Nm @ 8000 rpm</li>
-              </ul>
-              <h2>Price : $1999.99</h2>
-              <button class="btn2">Buy Now</button>
-            </div>
-            <div class="right">
-                <div class="ani-imgae">
-                    <img src="/image/bike2.png" alt="">
-                </div>
-            </div>
-          </div>
-          <div class="item flex">
-            <div class="left">
-              <p>(Fashion , Twin Disc)</p>
-              <h1>KTM 125 DUKE</h1>
-              <span></span>
-              <ul>
-                <li>- Engine Cc : 370.0cc</li>
-                <li>- Max Power : 14.5 bhp @ 9250 rpm</li>
-                <li>- Tank Capacity : 10.2 L</li>
-                <li>- Wheelbase : 1366 mm</li>
-                <li>- Cooling : Liquid Cooled</li>
-                <li>- Max Torque : 12 Nm @ 8000 rpm</li>
-              </ul>
-              <h2>Price : $1999.99</h2>
-              <button class="btn2">Buy Now</button>
-            </div>
-            <div class="right">
-                <div class="ani-imgae">
-                    <img src="/image/bike2.png" alt="">
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
-      integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script>
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        dots: false,
-        navText: [
-          "<i class='far fa-chevron-left'></i>",
-          "<i class='far fa-chevron-right'></i>",
-        ],
-        responsive: {
-          0: {
-            items: 1,
-          },
-          768: {
-            items: 1,
-          },
-          1000: {
-            items: 1,
-          },
-        },
-      });
-    </script>
-
-    <section class="Poppular latest slider">
-        <div class="scontainer">
-            <div class="heading">
-              <h1>Latest Poppular Bike</h1>
-              <div class="lines flex1">
-                <div class="line"><i class="fas fa-circle"></i></div>
-                <button>50% OFF</button>
-                <div class="line line2"><i class="fas fa-circle"></i></div>
-              </div>
-            </div>
-
-            <div class="owl-carousel owl-theme">
-                <div class="box">
-                    <div class="img">
-                      <img src="image/l1.png" alt="" />
-                      <div class="flex1">
-                        <label>50%</label>
-                        <i class="fas fa-heart"></i>
-                      </div>
-                    </div>
-        
-                    <div class="detalis">
-                      <h3>Aerion Carrbo Helmet</h3>
-                      <p>(Fashion , Twin Disc)</p>
-                      <h2>$699 <span>$799</span></h2>
-                      <button>Buy Now</button>
-                    </div>
-                  </div>
-        
-                  <div class="box">
-                    <div class="img">
-                      <img src="image/l2.png" alt="" />
-                      <div class="flex1">
-                        <label>50%</label>
-                        <i class="fas fa-heart"></i>
-                      </div>
-                    </div>
-        
-                    <div class="detalis">
-                      <h3>Aerion Carrbo Helmet</h3>
-                      <p>(Fashion , Twin Disc)</p>
-                      <h2>$699 <span>$799</span></h2>
-                      <button>Buy Now</button>
-                    </div>
-                  </div>
-        
-                  <div class="box">
-                    <div class="img">
-                      <img src="image/l3.png" alt="" />
-                      <div class="flex1">
-                        <label>50%</label>
-                        <i class="fas fa-heart"></i>
-                      </div>
-                    </div>
-        
-                    <div class="detalis">
-                      <h3>Aerion Carrbo Helmet</h3>
-                      <p>(Fashion , Twin Disc)</p>
-                      <h2>$699 <span>$799</span></h2>
-                      <button>Buy Now</button>
-                    </div>
-                  </div>
-            </div>
-
-        </div>
-    </section>
-   
-   
-   <script>
-        $('.owl-carousel').owlCarousel({
-          loop: true,
-          margin: 10,
-          nav: true,
-          dots: false,
-          navText: ["<i class='far fa-chevron-left'></i>", "<i class='far fa-chevron-right'></i>"],
-          responsive: {
-            0: {
-              items: 1
-            },
-            768: {
-              items: 2
-            },
-            1000: {
-              items: 3
-            }
-          }
-        })
-      </script>
-  
-
-  <section class="wrapper top">
-    <div class="scontainer">
-      <div class="text">
-        <p>(World's Thinnest SUPER DUKE)</p>
-        <h1>1290 Super Duke Gt 2021</h1>
-        <h3>Price : $5168.00</h3>
-        <button class="btn2">Buy Now</button>
-      </div>
-      <div class="ani_image">
-        <img src="image/bike3.png" alt="">
-      </div>
-    </div>
-  </section>
-
-  <section class="latest Assesories top">
-    <div class="scontainer">
-      <div class="heading">
-        <h1>Choose Bike Assesories</h1>
-        <div class="lines flex1">
-          <div class="line"> <i class="fas fa-circle"></i> </div>
-          <button>25% OFF</button>
-          <div class="line line2"> <i class="fas fa-circle"></i> </div>
-        </div>
-      </div>
-
-      <div class="content grid top">
-        <div class="box">
-          <div class="img">
-            <img src="image/a1.png" alt="">
-            <div class="flex1">
-              <label>50%</label>
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-
-          <div class="detalis">
-            <h3>Aerion Carrbo Helmet</h3>
-            <p>(Fashion , Twin Disc)</p>
-            <h2>$699 <span>$799</span> </h2>
-            <button>Buy Now</button>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img">
-            <img src="image/a2.png" alt="">
-            <div class="flex1">
-              <label>50%</label>
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-
-          <div class="detalis">
-            <h3>Aerion Carrbo Helmet</h3>
-            <p>(Fashion , Twin Disc)</p>
-            <h2>$699 <span>$799</span> </h2>
-            <button>Buy Now</button>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img">
-            <img src="image/a3.png" alt="">
-            <div class="flex1">
-              <label>50%</label>
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-
-          <div class="detalis">
-            <h3>Aerion Carrbo Helmet</h3>
-            <p>(Fashion , Twin Disc)</p>
-            <h2>$699 <span>$799</span> </h2>
-            <button>Buy Now</button>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img">
-            <img src="image/a4.png" alt="">
-            <div class="flex1">
-              <label>50%</label>
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-
-          <div class="detalis">
-            <h3>Aerion Carrbo Helmet</h3>
-            <p>(Fashion , Twin Disc)</p>
-            <h2>$699 <span>$799</span> </h2>
-            <button>Buy Now</button>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img">
-            <img src="image/a5.png" alt="">
-            <div class="flex1">
-              <label>50%</label>
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-
-          <div class="detalis">
-            <h3>Aerion Carrbo Helmet</h3>
-            <p>(Fashion , Twin Disc)</p>
-            <h2>$699 <span>$799</span> </h2>
-            <button>Buy Now</button>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img">
-            <img src="image/a6.png" alt="">
-            <div class="flex1">
-              <label>50%</label>
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-
-          <div class="detalis">
-            <h3>Aerion Carrbo Helmet</h3>
-            <p>(Fashion , Twin Disc)</p>
-            <h2>$699 <span>$799</span> </h2>
-            <button>Buy Now</button>
-          </div>
+          <table class="size-chart-table">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Head Circumference (cm)</th>
+                <th>Inches</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>XS</strong></td><td>53 - 54 cm</td><td>20.8" - 21.2"</td></tr>
+              <tr><td><strong>S</strong></td><td>55 - 56 cm</td><td>21.6" - 22.0"</td></tr>
+              <tr><td><strong>M</strong></td><td>57 - 58 cm</td><td>22.4" - 22.8"</td></tr>
+              <tr><td><strong>L</strong></td><td>59 - 60 cm</td><td>23.2" - 23.6"</td></tr>
+              <tr><td><strong>XL</strong></td><td>61 - 62 cm</td><td>24.0" - 24.4"</td></tr>
+              <tr><td><strong>2XL</strong></td><td>63 - 64 cm</td><td>24.8" - 25.2"</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="shipping">
-    <div class="scontainer grid">
-      <div class="box flex">
-        <div class="img">
-          <i class="fas fa-shipping-fast"></i>
-        </div>
-        <div class="text">
-          <h3>Free Shipp & Return</h3>
-          <p>Worldwide Free Shipping on Order Over $200 </p>
-        </div>
-      </div>
-      <div class="box flex">
-        <div class="img">
-          <i class='far fa-hourglass'></i>
-        </div>
-        <div class="text">
-          <h3>Free Shipp & Return</h3>
-          <p>Worldwide Free Shipping on Order Over $200 </p>
-        </div>
-      </div>
-      <div class="box flex">
-        <div class="img">
-          <i class="fas fa-shield-alt"></i>
-        </div>
-        <div class="text">
-          <h3>Free Shipp & Return</h3>
-          <p>Worldwide Free Shipping on Order Over $200 </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Book Test Ride Modal -->
+    <div class="modal-overlay" id="testRideModal" onclick="if(event.target === this) closeModal('testRideModal')">
+      <div class="modal-container">
+        <button class="modal-close-btn" onclick="closeModal('testRideModal')" aria-label="Close Modal">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-form-wrap">
+          <span class="badge badge-green"><i class="fas fa-flag-checkered"></i> VIP Track Experience</span>
+          <h3 style="margin-top: 10px;">Book a Superbike Test Ride</h3>
+          <p>Choose your dream machine and schedule a private showroom consultation or test circuit session.</p>
 
-  <footer>
-    <div class="scontainer grid">
-      <div class="box">
-        <div class="logo">
-          <img src="image/logo.png" alt="">
-        </div>
-        <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h1>+ 123 456 7898</h1>
-        <small>Email : gorkcoder@gmail.com</small>
-      </div>
-
-      <div class="box">
-        <h3>Customer Services</h3>
-        <div class="flex1">
-          <ul>
-            <li>Help</li>
-            <li>Contact Us</li>
-            <li>Warranty</li>
-            <li>Terms & Conditions</li>
-            <li>Shopping information</li>
-            <li>Gift Vocher</li>
-          </ul>
-          <ul>
-            <li>My Account</li>
-            <li>Arder Status </li>
-            <li>Payment</li>
-            <li>Oders </li>
-            <li>Cancellation </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="box">
-        <h3>Let's stay in touch</h3>
-        <div class="input flex1">
-          <input type="email" placeholder="Email Address">
-          <i class="far fa-long-arrow-right"></i>
-        </div>
-        <p>Get Update on sales specials and more</p>
-        <div class="social_media">
-          <i class="fab  fa-facebook-f"></i>
-          <i class="fab  fa-instagram"></i>
-          <i class="fab  fa-twitter"></i>
-          <i class="fab  fa-youtube"></i>
-          <i class="fab  fa-google"></i>
+          <form id="testRideForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="riderName">Full Name *</label>
+                <input type="text" id="riderName" name="riderName" placeholder="e.g. Alex Henderson" required />
+              </div>
+              <div class="form-group">
+                <label for="riderPhone">Phone Number *</label>
+                <input type="tel" id="riderPhone" name="riderPhone" placeholder="+1 (555) 019-2834" required />
+              </div>
+              <div class="form-group">
+                <label for="riderEmail">Email Address *</label>
+                <input type="email" id="riderEmail" name="riderEmail" placeholder="alex@motorsport.com" required />
+              </div>
+              <div class="form-group">
+                <label for="testRideBikeSelect">Preferred Bike Model *</label>
+                <select id="testRideBikeSelect" name="bikeSelect" required>
+                  <option value="bike-ktm-1290">KTM 1290 Super Duke R EVO</option>
+                  <option value="bike-panigale-v4">Ducati Panigale V4 S 2026</option>
+                  <option value="bike-superduke-gt">KTM 1290 Super Duke GT</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="showroomSelect">Showroom Location *</label>
+                <select id="showroomSelect" name="showroomSelect" required>
+                  <option value="Bangkok Flagship & Circuit Hub">Bangkok Flagship & Circuit Hub (TH)</option>
+                  <option value="California Speedway Apex Center">California Speedway Apex Center (US)</option>
+                  <option value="Milan Monza Motorsport Hub">Milan Monza Motorsport Hub (IT)</option>
+                  <option value="Tokyo Fuji Speed Hub">Tokyo Fuji Speed Hub (JP)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="testDate">Preferred Date *</label>
+                <input type="date" id="testDate" name="testDate" required />
+              </div>
+              <div class="form-group full-width">
+                <label for="ridingExperience">Riding Experience & License Level</label>
+                <select id="ridingExperience" name="ridingExperience">
+                  <option value="expert">Advanced / Trackday Racer (>5 yrs)</option>
+                  <option value="intermediate">Intermediate Rider (2-5 yrs)</option>
+                  <option value="beginner">Full Heavy Motorcycle License (<2 yrs)</option>
+                </select>
+              </div>
+              <div class="form-group full-width" style="margin-top: 10px;">
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  <i class="fas fa-check-circle"></i> Confirm Test Ride Booking
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  </footer>
 
+    <!-- Order / Checkout Success Modal -->
+    <div class="modal-overlay" id="orderSuccessModal" onclick="if(event.target === this) closeModal('orderSuccessModal')">
+      <div class="modal-container" style="max-width: 520px; text-align: center; padding: 40px 30px;">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: rgba(0, 230, 118, 0.15); color: var(--accent-green); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 20px; border: 2px solid var(--accent-green);">
+          <i class="fas fa-check"></i>
+        </div>
+        <h2 style="font-size: 2rem; margin-bottom: 10px;">Order Placed Successfully!</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+          Thank you for choosing APEX MOTORS. Your order reference is:
+        </p>
+        <div style="background: var(--bg-card); padding: 12px 20px; border-radius: var(--radius-md); border: 1px dashed var(--border-glow); display: inline-block; margin-bottom: 24px;">
+          <strong id="orderNumberDisplay" style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--accent-green);">APX-829104</strong>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 30px;">
+          A tracking number and invoice have been dispatched to your email address.
+        </p>
+        <button class="btn btn-primary" onclick="closeModal('orderSuccessModal')">
+          <i class="fas fa-shopping-bag"></i> Continue Shopping
+        </button>
+      </div>
+    </div>
 
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
 
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <div class="container footer-grid">
+        <div class="footer-col footer-about">
+          <div class="brand-logo">
+            <img src="image/logo.png" alt="APEX Motors" />
+            <div class="brand-logo-text">
+              APEX MOTORS
+              <span>SUPERBIKE WORKSHOP</span>
+            </div>
+          </div>
+          <p>
+            Official authorized dealership and performance motorsport center. Supplying world-class superbikes, factory race upgrades, and certified gear since 2012.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Showroom & Models</h4>
+          <div class="footer-links">
+            <a href="#showroom">KTM 1290 Super Duke R</a>
+            <a href="#showroom">Ducati Panigale V4 S</a>
+            <a href="#showroom">KTM 1290 Super Duke GT</a>
+            <a href="#comparison">Side-by-Side Spec Compare</a>
+            <a href="#financing">Financing & Trade-In</a>
+            <a href="#" onclick="openTestRideModal()">Book VIP Test Ride</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Service & Hubs</h4>
+          <div class="footer-links">
+            <a href="#catalog">Riding Gear & Helmets</a>
+            <a href="#" onclick="openHelmetGuideModal()">Helmet Size Calculator</a>
+            <a href="#dealerships">Global Dealership Hubs</a>
+            <a href="#">Trackside Dyno Support</a>
+            <a href="#">Warranty & Guarantee</a>
+            <a href="#">Terms & Privacy</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Join the APEX Squad</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 12px;">Subscribe for exclusive trackday invites, flash discounts, and new bike drop alerts.</p>
+          <form id="newsletterForm">
+            <div class="newsletter-box">
+              <input type="email" id="newsletterEmail" placeholder="Enter your email address..." required />
+              <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-arrow-right"></i></button>
+            </div>
+          </form>
+          <div style="margin-top: 20px; font-size: 0.85rem; color: var(--text-muted);">
+            <p><i class="fas fa-map-marker-alt" style="color: var(--accent-green); margin-right: 6px;"></i> 888 Apex Circuit Way, Speed City</p>
+            <p style="margin-top: 6px;"><i class="fas fa-phone" style="color: var(--accent-green); margin-right: 6px;"></i> +1 (800) 888-APEX</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 APEX MOTORS WORKSHOP. All Rights Reserved. Engineered for Speed.</p>
+        <div class="payment-icons">
+          <i class="fab fa-cc-visa" title="Visa"></i>
+          <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+          <i class="fab fa-cc-apple-pay" title="Apple Pay"></i>
+          <i class="fab fa-google-pay" title="Google Pay"></i>
+          <i class="fab fa-bitcoin" title="Bitcoin Accepted"></i>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Canvas Confetti CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+    <!-- Application Script -->
     <script src="app.js"></script>
   </body>
 </html>
